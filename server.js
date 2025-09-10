@@ -28,7 +28,11 @@ app.get("/about", (req,res) =>{
 })
 
 app.get("/greeting", (req,res) => {
-    res.send(`tjeeena ${req.query.name}, ${req.query.message}`)
+    res.render("greeting.njk",{
+        title: "greeting",
+        name: req.query.name,
+        message: req.query.message,
+    })
 })
 
 app.listen(3000,() =>{

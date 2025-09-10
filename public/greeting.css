@@ -1,0 +1,22 @@
+body {
+    background-image: url("images/paper_background.jpg");
+}
+
+img {
+    border-style: dashed;
+    border-color: rgba(0, 0, 0, 0.432);
+}
+
+.container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.373);
+    border-radius: 1rem;
+
+    width: 50%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
