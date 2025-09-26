@@ -2,6 +2,20 @@
 
 {% block content %}
 <main>
+    <ul>
+        {% for item in {{nav}} %}
+        <li>
+            <a href="{{item}}">{{item}}</a>
+        </li>
+        {% else %}
+        <li>
+            <p>whaaa</p>
+        </li>
+        {% endfor %}
+    </ul>
+    
+
+
     <h1>{{title}}</h1>
     <p>{{message}}</p>
 </main>
