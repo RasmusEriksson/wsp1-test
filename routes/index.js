@@ -1,7 +1,20 @@
 import express from "express"
 const router = express.Router()
 
-const nav = ["/","/about","/greeting"]
+const nav = [
+    {
+        "url": "/",
+        "title": "Hem"
+    },
+    {
+        "url": "/about",
+        "title": "Om"
+    },
+    {
+        "url": "/greeting",
+        "title": "Hälsning"
+    },
+]
 
 router.get("/", (req, res) =>{
     res.render("index.njk", {
