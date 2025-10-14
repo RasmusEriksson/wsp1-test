@@ -7,7 +7,7 @@
         <ul>
             {% for item in fruit %}
                 <li>
-                    <h2>{{item.name}}</h2>
+                    <h2><a href="/fruit/{{item.id}}">{{item.name}}</a></h2>
                     <p>This fruit is {{item.texture}} in it's texture</p>
                 </li>
             {% endfor %}

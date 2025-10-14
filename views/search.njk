@@ -1,0 +1,39 @@
+{% extends "layouts/paper_layout.njk" %}
+
+{% block content %}
+<main>
+    
+
+    <div class="container">
+        <h1>Fruits and their textures</h1>
+
+        <form action="/search" method="GET">
+            <input type="text" name="q">
+            <button type="submit">Search</button>
+        </form>
+
+        {% if query.length %}
+        <p>you've searched on: {{query}}</p>
+        {% else %}
+        <p>showing all results</p>
+        {% endif %}
+
+        {% if results.length %}
+
+        <ul class="fruits">
+            {% for item in results %}
+                <li>
+                    <h2><a href="/fruit/{{item.id}}">{{item.name}}</a></h2>
+                    <img src="/images/fruits/{{item.image}}" alt="">
+                    <p>This fruit is {{item.texture}} in it's texture</p>
+                </li>
+            {% endfor %}
+        </ul>
+
+        {% else %}
+            <h2>No results found :[</h2>
+        {% endif%}
+    </div>
+</main>
+   
+{% endblock %}

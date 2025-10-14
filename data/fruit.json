@@ -3,22 +3,26 @@
         {
             "id" : 1,
             "name" : "apple",
-            "texture" : "crunchy"
+            "texture" : "crunchy",
+            "image" : "apple.jpg"
         },
         {
             "id" : 2,
             "name" : "orange",
-            "texture" : "slimey"
+            "texture" : "slimey",
+            "image" : "oranges.jpg"
         },
         {
             "id" : 3,
             "name" : "banana",
-            "texture" : "soft"
+            "texture" : "soft",
+            "image" : "banana.jpg"
         },
         {
             "id" : 4,
             "name" : "watermelon",
-            "texture" : "crunchy"
+            "texture" : "crunchy",
+            "image" : "watermelono.jpg"
         }
     ]
 }

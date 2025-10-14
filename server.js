@@ -10,6 +10,7 @@ app.use(express.static("public"))
 
 import index_router from "./routes/index.js"
 import router from "./routes/index.js"
+import { runInNewContext } from "vm"
 
 const {fruits} = JSON.parse(fs.readFileSync("./data/fruit.json"))
 
@@ -43,6 +44,18 @@ router.get("/fruit/:id", (req,res) => {
         console.log("baiiiiiiii :(")
         res.status(404).json({error: "fruit not found"})
     }
+})
+
+
+router.get("/search", (req,res) => {
+    const query = req.query.q
+    const results = fruits.filter(fruit => fruit.name.toLowerCase().includes(query.toLowerCase()) 
+    || fruit.texture.toLowerCase().includes(query.toLowerCase()))
+
+    res.render("search.njk", {
+        results: results,
+        query: query
+    })
 })
 
 

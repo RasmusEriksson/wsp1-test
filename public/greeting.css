@@ -20,3 +20,28 @@ img {
     align-items: center;
     gap: 1rem;
 }
+
+.fruits {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    list-style: none;
+    gap: 1rem;
+    
+    
+    li {
+        background-color: white;
+        width: 15rem;
+
+        img {
+            height: 8rem;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
